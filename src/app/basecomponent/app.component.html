@@ -1,0 +1,13 @@
+<!-- src/app/app.component.html -->
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidenav" mode="side" opened style="width: 250px; background: url('assets/sidenav-background2.jpg') no-repeat center center; background-size: cover; color: #ffffff;">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-nav [appComponent]="this"></app-nav>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

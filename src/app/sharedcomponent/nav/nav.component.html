@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="navbar" id="navbar">
+  <button mat-icon-button (click)="toggleSidenav()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="logo">Pets-Care</span>
+  <span class="spacer"></span>
+  <nav>
+    <a mat-button routerLink="/">Main</a>
+    <a mat-button routerLink="/managecategories">Manage-Categories</a>
+    <a mat-button routerLink="/manageitems">Manage-Items</a>
+    <a mat-button routerLink="/getall-pets">Pets</a>
+    <a mat-button routerLink="/getall-users">Users</a>
+  </nav>
+  <span class="spacer"></span>
+  <button mat-button *ngIf="!isLoggedIn" class="sign-up-button" routerLink="/signin">Sign In</button>
+  <button mat-button *ngIf="isLoggedIn" class="sign-up-button" (click)="signOut()">Sign Out</button>
+</mat-toolbar>

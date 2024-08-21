@@ -1,0 +1,54 @@
+<div class="dialog-wrapper">
+    <h1 class="dialog-header">{{item.id ? 'Edit Item' : 'Add Item'}}</h1>
+    <div class="dialog-content">
+        <div class="form-row">
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Item Name</mat-label>
+                <input matInput [(ngModel)]="item.name">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Description</mat-label>
+                <input matInput [(ngModel)]="item.description">
+            </mat-form-field>
+        </div>
+
+        <div class="form-row">
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Image URL</mat-label>
+                <input matInput [(ngModel)]="item.image">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Price</mat-label>
+                <input matInput [(ngModel)]="item.price">
+            </mat-form-field>
+        </div>
+
+        <div class="form-row">
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Quantity</mat-label>
+                <input matInput [(ngModel)]="item.quantity">
+            </mat-form-field>
+
+            <mat-checkbox class="form-checkbox" [(ngModel)]="item.isHaveDiscount">Has Discount</mat-checkbox>
+        </div>
+
+        <div class="form-row">
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Discount Amount</mat-label>
+                <input matInput [(ngModel)]="item.discountAmount">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Discount Type</mat-label>
+                <input matInput [(ngModel)]="item.discountType">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="dialog-actions">
+        <button mat-button (click)="onCancel()">Cancel</button>
+        <button mat-button color="primary" (click)="onSave()">Save</button>
+    </div>
+</div>

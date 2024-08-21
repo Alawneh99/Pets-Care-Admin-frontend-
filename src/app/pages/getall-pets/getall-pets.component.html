@@ -1,0 +1,17 @@
+<div class="background-wrapper">
+    <div class="background-image" style="background: url('../../../assets/mainbackground.jpg') no-repeat center center fixed;"></div>
+    <div class="gallery-container">
+      <div class="gallery">
+        <div class="pet-item" *ngFor="let pet of pets">
+          <img [src]="pet.image" [alt]="pet.nickName" class="pet-image">
+          <div class="pet-info">
+            <h3>{{ pet.nickName }}</h3>
+            <p><strong>Gender:</strong> {{ pet.gender }}</p>
+            <p><strong>Type:</strong> {{ pet.petType }}</p>
+            <p><strong>Age:</strong> {{ pet.age }} years</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

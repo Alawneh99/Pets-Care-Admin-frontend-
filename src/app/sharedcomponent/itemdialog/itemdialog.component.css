@@ -1,0 +1,77 @@
+.dialog-wrapper {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.dialog-header {
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-field {
+    flex: 1;
+    min-width: 0; /* Ensures fields don't overflow the container */
+}
+
+.form-checkbox {
+    align-self: center;
+    margin-left: 20px;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #3f51b5;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5c6bc0;
+}
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dialog-actions button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #ffffff;
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dialog-actions button:hover {
+    background: linear-gradient(45deg, #2575fc 0%, #6a11cb 100%);
+}
+
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input{
+    color: rgba(0, 0, 0, 0.87) !important; 
+}

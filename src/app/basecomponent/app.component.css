@@ -1,0 +1,12 @@
+
+.container {
+  padding-top: 64px; /* Height of the navbar */
+ 
+}
+.mat-sidenav-container {
+  height: 100vh;
+}
+
+.mat-sidenav-content {
+  padding: 16px;
+}

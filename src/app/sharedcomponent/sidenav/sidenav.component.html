@@ -1,0 +1,33 @@
+<mat-toolbar class="sidenav-header">
+  <span style="color: #ffffff;">Menu</span>
+</mat-toolbar>
+<mat-nav-list>
+  <a mat-list-item routerLink="/" style="color: #ffffff; display: flex; align-items: center; height: 100px;">
+    <mat-icon style="color: #ffffff; margin-right: 16px;">home</mat-icon>
+    <span style="color: #ffffff;">Main</span>
+  </a>
+  <a mat-list-item routerLink="/managecategories" style="color: #ffffff; display: flex; align-items: center; height: 100px;">
+    <mat-icon style="color: #ffffff; margin-right: 16px;">category</mat-icon>
+    <span style="color: #ffffff;">Manage Categories</span>
+  </a>
+  <a mat-list-item routerLink="/manageitems" style="color: #ffffff; display: flex; align-items: center; height: 100px;">
+    <mat-icon style="color: #ffffff; margin-right: 16px;">inventory</mat-icon>
+    <span style="color: #ffffff;">Manage Items</span>
+  </a>
+  <a mat-list-item routerLink="/getall-pets" style="color: #ffffff; display: flex; align-items: center; height: 100px;">
+    <mat-icon style="color: #ffffff; margin-right: 16px;">pets</mat-icon>
+    <span style="color: #ffffff;">Pets</span>
+  </a>
+  <a mat-list-item routerLink="/getall-users" style="color: #ffffff; display: flex; align-items: center; height: 100px;">
+    <mat-icon style="color: #ffffff; margin-right: 16px;">people</mat-icon>
+    <span style="color: #ffffff;">Users</span>
+  </a>
+  <a mat-list-item *ngIf="!isLoggedIn" routerLink="/signin" style="color: #ffffff; display: flex; align-items: center; height: 100px;">
+    <mat-icon style="color: #ffffff; margin-right: 16px;">login</mat-icon>
+    <span style="color: #ffffff;">Sign In</span>
+  </a>
+  <a mat-list-item *ngIf="isLoggedIn" (click)="signOut()" style="color: #ffffff; display: flex; align-items: center; height: 100px;">
+    <mat-icon style="color: #ffffff; margin-right: 16px;">logout</mat-icon>
+    <span style="color: #ffffff;">Sign Out</span>
+  </a>
+</mat-nav-list>

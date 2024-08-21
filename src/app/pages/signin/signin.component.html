@@ -1,0 +1,58 @@
+<div class="signin-container login-container" style="background-image: url('../../../assets/login-bg.png');">
+  <app-alert [message]="alertMessage" [type]="alertType" *ngIf="alertMessage"></app-alert> <!-- Add the Alert Component here -->
+  
+  <div class="login-form">
+    <form (submit)="preventDefault($event)">
+      <h1>Login</h1>
+      <!-- Login Form -->
+      <mat-form-field appearance="outline" *ngIf="!showForgotPassword && !showResetPasswordForm">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="email" name="email" type="email" required autocomplete="email">
+      </mat-form-field>
+      <mat-form-field appearance="outline" *ngIf="!showForgotPassword && !showResetPasswordForm">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="password" name="password" type="password" required autocomplete="current-password">
+      </mat-form-field>
+      <mat-checkbox *ngIf="!showForgotPassword && !showResetPasswordForm">Remember me</mat-checkbox>
+      <button mat-raised-button color="primary" (click)="login()" *ngIf="!showForgotPassword && !showResetPasswordForm">Login</button>
+
+      <!-- Forgot Password Links -->
+      <div class="extra-links" *ngIf="!showForgotPassword && !showResetPasswordForm">
+        <a href="#" (click)="toggleForgotPassword(); preventDefault($event)">Forgot Password?</a>
+        <a routerLink="/signup">Don't have an account? Register</a>
+      </div>
+
+      <!-- Forgot Password Section -->
+      <div *ngIf="showForgotPassword">
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your email</mat-label>
+          <input matInput [(ngModel)]="email" name="forgotEmail" type="email" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="showResetPasswordFormFn()">Reset Password</button>
+        <div class="extra-links">
+          <a href="#" (click)="toggleForgotPassword(); preventDefault($event)">Back to Login</a>
+        </div>
+      </div>
+
+      <!-- Reset Password Form -->
+      <div *ngIf="showResetPasswordForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="email" name="resetEmail" type="email" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Token</mat-label>
+          <input matInput [(ngModel)]="resetToken" name="resetToken" type="text" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>New Password</mat-label>
+          <input matInput [(ngModel)]="newPassword" name="newPassword" type="password" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="resetPassword()">Submit</button>
+        <div class="extra-links">
+          <a href="#" (click)="showResetPasswordForm = false; preventDefault($event)">Back to Login</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

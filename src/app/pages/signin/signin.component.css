@@ -1,0 +1,130 @@
+/* Ensure the entire viewport is covered and centered */
+.signin-container {
+    position: fixed; /* Position relative to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 999; /* Ensure it's above other content */
+}
+
+/* Container for the form */
+.signin-container .login-container {
+    width: 100%;
+    max-width: 500px; /* Limit width of the form container */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1001; /* Ensure it is on top */
+}
+input {
+    -webkit-background-clip: text !important;
+  }
+
+  input:-webkit-autofill {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: #fff !important; /* Ensures the text color is white when autofilled */
+}
+
+/* Styling the form */
+.signin-container .login-form {
+    width: 100%;
+    max-width: 500px; 
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    padding: 30px; 
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1002; /* Highest z-index to ensure form is on top */
+}
+
+/* Heading style */
+.signin-container .login-form h1 {
+    margin-bottom: 30px; 
+    color: #fff;
+    font-size: 3em; 
+}
+
+/* Form field styling */
+.signin-container mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Styling the Material Design form field */
+.signin-container ::ng-deep .mat-mdc-form-field-fill {
+    border-color: rgba(255, 255, 255, 0.5) !important; 
+}
+
+.signin-container ::ng-deep .mat-mdc-notched-outline {
+    border-color: rgba(255, 255, 255, 1) !important; 
+}
+
+.signin-container ::ng-deep .mat-mdc-floating-label {
+    color: rgba(255, 255, 255, 0.5) !important; 
+}
+
+.signin-container ::ng-deep .mat-mdc-floating-label.mdc-floating-label--float-above,
+.signin-container ::ng-deep .mat-mdc-floating-label.mdc-floating-label--shake {
+    color: #fff !important; 
+}
+
+.signin-container ::ng-deep .mat-mdc-input-element {
+    color: #fff !important; 
+}
+
+.signin-container ::ng-deep .mat-mdc-input-element::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important; 
+}
+
+.signin-container ::ng-deep .mdc-notched-outline--upgraded .mat-mdc-input-element::placeholder {
+    color: #fff !important; 
+}
+
+/* Checkbox styling */
+.signin-container ::ng-deep .mat-mdc-checkbox .mdc-checkbox__background {
+    border-color: rgba(255, 255, 255, 0.5) !important; 
+}
+
+.signin-container ::ng-deep .mat-mdc-checkbox .mdc-checkbox__checkmark {
+    color: rgba(255, 255, 255, 0.5) !important; 
+}
+
+.signin-container ::ng-deep .mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__background,
+.signin-container ::ng-deep .mat-mdc-checkbox.mat-mdc-checkbox-indeterminate .mdc-checkbox__background {
+    background-color: #fff !important;
+}
+
+/* Button styling */
+.signin-container button {
+    width: 100%;
+    margin-bottom: 20px; 
+    padding: 15px; 
+    font-size: 1.2em; 
+}
+
+/* Extra links styling */
+.signin-container .extra-links {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.signin-container .extra-links a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.signin-container .extra-links a:hover {
+    opacity: 1;
+}

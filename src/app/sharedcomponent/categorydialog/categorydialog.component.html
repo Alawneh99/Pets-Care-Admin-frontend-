@@ -1,0 +1,19 @@
+<div class="dialog-wrapper">
+    <h1 class="dialog-header">{{category.id ? 'Edit Category' : 'Add Category'}}</h1>
+    <div class="dialog-content">
+      <mat-form-field appearance="fill">
+        <mat-label>Category Name</mat-label>
+        <input matInput [(ngModel)]="category.name">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Image URL</mat-label>
+        <input matInput [(ngModel)]="category.image">
+      </mat-form-field>
+    </div>
+    <div class="dialog-actions">
+      <button mat-button (click)="onCancel()">Cancel</button>
+      <button mat-button color="white" (click)="onSave()">Save</button>
+    </div>
+  </div>
+  

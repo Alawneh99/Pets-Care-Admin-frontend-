@@ -1,0 +1,118 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.background-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.table-wrapper {
+  background: rgba(0, 0, 0, 0.5); /* Darker background for better contrast */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 30px; /* Increase padding for a larger table */
+  width: 100%; /* Adjust the width of the table */
+  max-width: 1500px; /* Set a maximum width */
+  margin: 0 auto; /* Center the table */
+  
+}
+
+
+::ng-deep.mat-sort-header-content{
+  color: rgba(255, 255, 255, 0.9) !important; /* White text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Slight shadow for better readability */
+}
+::ng-deep .mdc-data-table__table {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+::ng-deep .mat-header-row, .mat-row {
+  background: rgba(255, 255, 255, 0.1) !important; /* Ensures the white areas also get the dark background */
+}
+
+::ng-deep .mat-header-cell, .mat-cell {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.9) !important; /* White text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Slight shadow for better readability */
+  font-size: 1.2em !important;
+}
+
+::ng-deep .mat-row .mat-cell {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.9) !important; /* White text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Slight shadow for better readability */
+  font-size: 1.2em !important;
+}
+
+::ng-deep .mat-header-row .mat-header-cell {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.9) !important; /* White text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Slight shadow for better readability */
+  font-size: 1.2em !important;
+}
+
+::ng-deep .mat-table {
+  border-spacing: 0;
+}
+
+::ng-deep .mat-elevation-z8 {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+::ng-deep .mat-icon {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  font-size: 1.2em !important;
+}
+
+::ng-deep .mat-mdc-paginator {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.9) !important; /* White text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Slight shadow for better readability */
+  font-size: 1.2em !important;
+}
+::ng-deep.mat-mdc-table tbody, .mat-mdc-table tfoot, .mat-mdc-table thead, .mat-mdc-cell, .mat-mdc-footer-cell, .mat-mdc-header-row, .mat-mdc-row, .mat-mdc-footer-row, .mat-mdc-table .mat-mdc-header-cell{
+  color: rgba(255, 255, 255, 0.9) !important; /* White text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Slight shadow for better readability */
+  height: 100px;
+  font-size: 1.2em !important;
+}
+
+::ng-deep .mat-mdc-select-value-text{
+  color: rgba(255, 255, 255, 0.9) !important; /* White text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Slight shadow for better readability */
+  font-size: 1.2em !important;
+}
+
+
+::ng-deep.mat-sort-header-indicator{
+  color: rgba(255, 255, 255, 0.9)
+  
+}
+::ng-deep.mat-sort-header-stem{
+  color: rgba(255, 255, 255, 0.9)
+  
+}

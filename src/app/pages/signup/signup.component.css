@@ -1,0 +1,141 @@
+/* Container styles using CSS Grid */
+.signup-container {
+    display: grid;
+    place-items: center; /* Centers the form in the container */
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+ 
+}
+
+.signup-form {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column grid for form fields */
+    gap: 15px; /* Space between form elements */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    max-width: 400px;
+    width: 100%;
+    z-index: 2;
+}
+
+  
+  .signup-form h1 {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .signup-form mat-form-field {
+    width: 100%;
+    margin-bottom: 1px;
+  }
+  
+  .signup-form .file-input-container {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .signup-form .custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .signup-form .custom-file-upload:hover {
+    background-color: #5b00d2;
+  }
+  
+  .signup-form .custom-file-upload:active {
+    background-color: #4f00b9;
+  }
+  
+  .signup-form input[type="file"] {
+    display: none;
+  }
+  
+  .signup-form button {
+    width: 100%;
+    padding: 1px;
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .signup-form button:hover {
+    background-color: #5b00d2;
+  }
+  
+  .signup-form button:active {
+    background-color: #4f00b9;
+  }
+  
+  .signup-form .extra-links {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .signup-form .extra-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .signup-form .extra-links a:hover {
+    text-decoration: underline;
+  }
+  /* Global styles for mat-form-field */
+.custom-input .mat-form-field-outline,
+.custom-input .mat-form-field-outline-thick,
+.custom-input .mat-form-field-outline-start,
+.custom-input .mat-form-field-outline-end {
+  border-color: white !important;
+}
+
+.custom-input .mat-form-field-label {
+  color: white !important;
+}
+
+.custom-input .mat-input-element {
+  color: white !important;
+}
+
+.custom-input .mat-form-field-ripple {
+  background-color: white !important;
+}
+
+.custom-input .mat-form-field-outline-gap {
+  border-color: white !important;
+}
+input {
+  -webkit-background-clip: text !important;
+}
+
+input:-webkit-autofill {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: #fff !important; /* Ensures the text color is white when autofilled */
+}
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: #fff !important; 
+}
+
+
+.mat-mdc-form-field-input-control.mat-mdc-form-field-input-control {
+  color: #fff !important; 
+}
+.mat-mdc-select-value {
+  color: #fff !important; 
+}

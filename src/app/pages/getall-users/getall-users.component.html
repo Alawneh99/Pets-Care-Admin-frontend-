@@ -1,0 +1,18 @@
+<div class="background-wrapper">
+    <div class="background-image" style="background: url('../../../assets/mainbackground.jpg') no-repeat center center fixed;"></div>
+    <div class="user-container">
+      <div class="user-gallery">
+        <div class="user-item" *ngFor="let user of users">
+          <img [src]="user.profileImage || 'https://picsum.photos/200/300?random=1'" [alt]="user.firstName" class="user-image">
+          <div class="user-info">
+            <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+            <p><strong>First Name:</strong> {{ user.firstName }}</p>
+            <p><strong>Last Name:</strong> {{ user.lastName }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Birthdate:</strong> {{ user.birthDate | date }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

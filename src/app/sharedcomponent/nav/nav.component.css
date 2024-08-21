@@ -1,0 +1,60 @@
+/* src/app/navbar/navbar.component.css */
+.navbar {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  color: #fff;
+  position: fixed;
+  top: 0; /* Ensure it stays at the top */
+  left: 1; /* Ensure it starts from the left */
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav a.active {
+  border-bottom: 2px solid blue;
+}
+
+.sign-up-button {
+  background-color: #1a73e8;
+  color: #fff;
+  font-size: 1.1em;
+  border-radius: 100px;
+}
+
+.sign-up-button:hover {
+  background-color: #1558b0;
+}
+
+.mat-toolbar {
+  padding: 0 30px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+}

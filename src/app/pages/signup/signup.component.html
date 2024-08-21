@@ -1,0 +1,62 @@
+<div class="signup-container" style="background-image: url('../../../assets/signup-bg.png');">
+  <div class="signup-form">
+    <form (ngSubmit)="onSubmit()">
+      <h1>Sign Up</h1>
+
+      <mat-form-field appearance="outline" class="custom-input">
+        <mat-label>First Name</mat-label>
+        <input matInput [(ngModel)]="signup.firstName" name="firstName" type="text" required autocomplete="First Name">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="custom-input">
+        <mat-label>Last Name</mat-label>
+        <input matInput [(ngModel)]="signup.lastName" name="lastName" type="text" required autocomplete="Last Name">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="custom-input">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="signup.email" name="email" type="email" required autocomplete="email">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="custom-input">
+        <mat-label>Phone</mat-label>
+        <input matInput [(ngModel)]="signup.phone" name="phone" type="tel" required autocomplete="tel">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="custom-input">
+        <mat-label>Birthdate</mat-label>
+        <input matInput [(ngModel)]="signup.birthDate" name="birthDate" [matDatepicker]="picker" (dateChange)="onDateChange($event)" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="custom-input">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="signup.password" name="password" type="password" required autocomplete="new-password">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="custom-input">
+        <mat-label>User Role</mat-label>
+        <mat-select [(ngModel)]="signup.userRoleID" name="userRoleID" required>
+          <mat-option *ngFor="let role of roles" [value]="role.id">
+            {{ role.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="file-input-container">
+        <label for="file-upload" class="custom-file-upload">
+          Upload Image
+        </label>
+        <input id="file-upload" type="file" (change)="onFileSelected($event)" required>
+        <span class="file-name">{{ selectedFileName }}</span>
+      </div>
+
+      <button mat-raised-button color="primary" type="submit">Register</button>
+
+      <div class="extra-links">
+        <a routerLink="/signin">Already have an account? Sign In</a>
+      </div>
+    </form>
+  </div>
+</div>
